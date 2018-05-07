@@ -125,6 +125,7 @@ void altaPersonas(EPersona vec[],int tam){
     if (indice == -1){
         printf("El sistema esta lleno, no se puede ingresar mas personas \n");
     } else {
+
         printf("ingrese dni de la persona que quiere registrar: ");
         scanf("%d",&dni);
     }
@@ -141,9 +142,15 @@ void altaPersonas(EPersona vec[],int tam){
         printf("\n-Ingrese Edad: ");
         scanf ("%d",&NuevaPersona.edad);
 
+        while (NuevaPersona.edad <=0 || NuevaPersona.edad >100){
+            printf("Error Ingrese una edad Correcta: ");
+            scanf ("%d",&NuevaPersona.edad);
+        }
+
         vec[indice] = NuevaPersona;
 
         printf("\n-Alta de personas Exitosa\n");
+        printf("--------------------------------------------------------------------------------------------------");
     }
 }
 
