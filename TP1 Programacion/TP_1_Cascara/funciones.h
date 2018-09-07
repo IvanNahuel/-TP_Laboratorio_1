@@ -41,7 +41,7 @@ int Factorear (int numeroFact);
  * \return devuelve la factorizacion del entero cargado a la funcion
 
 */
-float HacerTodasLasOperaciones(float numero1, float numero2);
+void HacerTodasLasOperaciones(float numero1, float numero2);
 /** \brief recibe dos Numeros y ejecuta todas las funciones asignadas a operaciones matematicas
  *
  * \param  posee como parametro dos numeros enteros
@@ -49,5 +49,21 @@ float HacerTodasLasOperaciones(float numero1, float numero2);
  * \return no devuelve nada
 
 */
+void IngresarNumero (float *num1);
+/** \brief recibe una direccion de memoria y pide un numero por consola y settea a lo que apunta esa direccion
+ *
+ * \param  posee como parametro una direccion de memoria de tipo flotante
+ *
+ * \return no devuelve nada
 
+*/
+
+void IngresarSegudo (float *num2);
+/** \brief recibe una direccion de memoria y pide un numero por consola y settea a lo que apunta esa direccion
+ *
+ * \param  posee como parametro una direccion de memoria de tipo flotante
+ *
+ * \return no devuelve nada
+
+*/
 #endif // FUNCIONES_H_INCLUDED
