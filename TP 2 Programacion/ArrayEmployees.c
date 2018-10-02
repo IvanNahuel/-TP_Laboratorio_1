@@ -18,8 +18,7 @@ int initEmployees(eEmployee* list,int len){
 */
 
 int addEmployee(eEmployee* list, int len, int id, char name[],char lastName[],float salary,int sector){
-    printf("%f",salary);
-    printf("%d",sector);
+
 
     int retorno=-1;
     if (list!=NULL && len>0){

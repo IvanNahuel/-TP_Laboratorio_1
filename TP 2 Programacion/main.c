@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "ArrayEmployees.h"
 #define LEN 1000
 
@@ -71,4 +72,5 @@ do{
 
         }
     }while(respuesta);
+    return 0;
 }
