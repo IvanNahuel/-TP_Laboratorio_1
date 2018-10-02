@@ -9,22 +9,29 @@ eEmployee list[LEN];
 
 char auxNombre[50];
 char auxApellido[50];
-float AuxSalario;
-int AuxSector;
+
+float salarioAux;
+int sectorAux;
 
 int idModificar;
 int idEliminar;
 
 initEmployees(list,LEN);
-int respuesta;
+int respuesta=1;
 int indexFree;
+int flagResto=0;
 
 do{
+    if (flagResto){
     respuesta=PedirRespuesta();
+    }
+
     switch (respuesta){
     case 1:
+
         indexFree= obtenerEspacioLibre(list,LEN);
         if (indexFree!=-1){
+
         printf("\nIngrese Apellido: ");
         fflush(stdin);
         gets(auxApellido);
@@ -34,16 +41,13 @@ do{
         gets(auxNombre);
 
         printf("\nIngrese salario: ");
-        scanf("%f",&AuxSalario);
-
-        printf("%f",AuxSalario);
+        scanf("%f",&salarioAux);
 
         printf("\nIngrese sector: ");
-        scanf("%d",&AuxSector);
+        scanf("%d",&sectorAux);
 
-        printf("%d",AuxSector);
-
-        addEmployee(list,LEN,indexFree,auxNombre,auxApellido,AuxSalario,AuxSector);
+        addEmployee(list,LEN,indexFree,auxNombre,auxApellido,salarioAux,sectorAux);
+        flagResto=1;
         }
         break;
     case 2:
@@ -64,6 +68,7 @@ do{
         sortEmployees(list,LEN,1);
         printEmployees(list,LEN);
         break;
+
         }
     }while(respuesta);
 }
