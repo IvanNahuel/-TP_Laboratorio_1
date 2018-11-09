@@ -116,7 +116,7 @@ int PedirRespuesta(){
     ImprimirMenu();
     printf("\n");
     scanf("%d",&respuesa);
-    while (respuesa<0 ||respuesa>5){
+    while (respuesa<0 ||respuesa>5 ){
         printf("\nError, reingrese respuesta correcta: ");
         scanf("%d",&respuesa);
     }

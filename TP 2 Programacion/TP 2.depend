@@ -48,3 +48,16 @@
 	<stdlib.h>
 	"ArrayEmployees.h"
 
+1538482214 source:c:\users\ivan nahuel\desktop\programacion\tp 2 programacion\arrayemployees.c
+	"ArrayEmployees.h"
+	<stdio.h>
+	<stdlib.h>
+
+1538482214 c:\users\ivan nahuel\desktop\programacion\tp 2 programacion\arrayemployees.h
+
+1538482214 source:c:\users\ivan nahuel\desktop\programacion\tp 2 programacion\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayEmployees.h"
+
