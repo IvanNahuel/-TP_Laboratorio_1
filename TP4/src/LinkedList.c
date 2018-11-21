@@ -250,29 +250,25 @@ int ll_remove(LinkedList* this,int index)
         {
             //si quiero eliminar el cero debo decirle a this que el primer nodo es el siguiente
             this->pFirstNode =PSiguiente;
-            returnAux = 0;
-            this->size--;
         }
         //si quiero eliminar el ultimo elemento debo decirle que el anterior apunte a null
-        else if (index==ll_len(this))
+        else if (index==ll_len(this)-1)
         {
             pNode = getNode(this,index-1);
             pNode->pNextNode = NULL;
-            returnAux = 0;
-            this->size--;
         }
         else
         {
             //si quiero eliminar uno del medio debo decir que el anterior apunte al que le
             //sigue del que quiero eliminar
             pNode = getNode(this,index-1);
-            Node*pNodeAux = getNode(this,index+2);
+            Node*pNodeAux = getNode(this,index+1);
             pNode->pNextNode =pNodeAux;
-            returnAux = 0;
-            this->size--;
         }
+        returnAux = 0;
+        this->size--;
+        free(pNodeDelete);
     }
-    free(pNodeDelete);
     //tengo que obtener el elemento anterior al indice y el siguiente
     //y setear el pNextNode
     //osea conectar (el index-1) y decirle que el siguiente es (el index +1)
@@ -511,7 +507,7 @@ int ll_containsAll(LinkedList* this,LinkedList* this2)
                 returnAux =1;
             }
         }
-    }
+      }
     return returnAux;
 }
 
